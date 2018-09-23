@@ -1,0 +1,24 @@
+{
+  "name": "@fem/clear",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "frontendmonster <frontendmonster@gmail.com>",
+  "main": "src/index.js",
+  "description": "Simple lib to clear console",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontendmonster/clear.git"
+  },
+  "scripts": {
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "husky": "^1.0.0-rc.14"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint -- --fix"
+    }
+  }
+}
