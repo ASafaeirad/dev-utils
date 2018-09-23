@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/frontendmonster/clear.git"
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "lint": "eslint src"
   },
