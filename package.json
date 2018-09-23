@@ -1,12 +1,12 @@
 {
-  "name": "@frontendmonster/clear",
+  "name": "@frontendmonster/dev-utils",
   "version": "1.0.0",
   "license": "MIT",
   "author": "frontendmonster <frontendmonster@gmail.com>",
-  "description": "Simple lib to clear console",
+  "description": "Useful utilities for node dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontendmonster/clear.git"
+    "url": "git+https://github.com/frontendmonster/dev-utils.git"
   },
   "files": [
     "src"

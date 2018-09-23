@@ -1,3 +1,3 @@
-# Clear
+# @frontendmonster/dev-utils
 
-Simple lib to clear the console
+Useful utilities for node dev
