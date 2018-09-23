@@ -5,6 +5,7 @@
   "author": "frontendmonster <frontendmonster@gmail.com>",
   "main": "src/index.js",
   "description": "Simple lib to clear console",
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frontendmonster/clear.git"
