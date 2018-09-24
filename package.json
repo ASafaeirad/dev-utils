@@ -1,6 +1,6 @@
 {
   "name": "@frontendmonster/dev-utils",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "private": true,
   "author": "frontendmonster <frontendmonster@gmail.com>",
@@ -9,10 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/frontendmonster/dev-utils.git"
   },
-  "files": [
-    "lib"
-  ],
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "clean": "rimraf lib",
     "prebuild": "npm run clean",
