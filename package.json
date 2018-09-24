@@ -1,6 +1,6 @@
 {
   "name": "@frontendmonster/dev-utils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "author": "frontendmonster <frontendmonster@gmail.com>",
   "description": "Useful utilities for node dev",
@@ -9,13 +9,13 @@
     "url": "git+https://github.com/frontendmonster/dev-utils.git"
   },
   "files": [
-    "dist"
+    "lib"
   ],
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf lib",
     "prebuild": "npm run clean",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir lib",
     "lint": "eslint src"
   },
   "devDependencies": {
