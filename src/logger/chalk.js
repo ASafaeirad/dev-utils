@@ -1,11 +1,13 @@
 import chalk from 'chalk';
 
-export const chInfo = chalk.blue;
-export const chError = chalk.red;
-export const chSuccess = chalk.green;
-export const chWarning = chalk.yellow;
-export const chProcessing = chalk.blue;
-export const chDisable = chalk.gray;
+const chalks = {
+  info: chalk.blue,
+  error: chalk.red,
+  success: chalk.green,
+  warning: chalk.yellow,
+  processing: chalk.blue,
+  disable: chalk.gray,
+};
 
 /**
  * Get morgan status and return chalk color
@@ -14,13 +16,13 @@ export const chDisable = chalk.gray;
 export const getChStatus = (status) => {
   switch (status) {
     case '2':
-      return chSuccess;
+      return chalks.success;
     case '3':
-      return chProcessing;
+      return chalks.processing;
     case '4':
-      return chWarning;
+      return chalks.warning;
     default:
-      return chError;
+      return chalks.error;
   }
 };
 
@@ -30,4 +32,6 @@ export const getChStatus = (status) => {
  * @param {number} [limit=100] - Response time limit
  * @returns {chalk}
  */
-export const getChTime = (time, limit = 100) => (time < limit ? chSuccess : chWarning);
+export const getChTime = (time, limit = 100) => (time < limit ? chalks.success : chalks.warning);
+
+export default chalks;

@@ -1,3 +1,3 @@
-export { chDisable, chError, chInfo, chProcessing, chSuccess, chWarning } from './chalk';
-export { morgan } from './morgan';
-export { Signale } from './signale';
+export { default as chalks } from './chalk';
+export { default as morgan } from './morgan';
+export { default as Signale } from './signale';

@@ -1,6 +1,6 @@
 import { Signale as SignaleBase } from 'signale';
 
-export const Signale = scope => new SignaleBase({
+const Signale = scope => new SignaleBase({
   stream: process.stdout,
   scope,
   types: {
@@ -25,3 +25,5 @@ export const Signale = scope => new SignaleBase({
     },
   },
 });
+
+export default Signale;

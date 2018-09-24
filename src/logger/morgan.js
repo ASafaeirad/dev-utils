@@ -1,8 +1,8 @@
 /* eslint-disable no-multi-spaces */
 import baseMorgan from 'morgan';
-import { chDisable, getChStatus, getChTime } from './chalk';
+import chalks, { getChStatus, getChTime } from './chalk';
 
-export const morgan = (scope, { badge = '⬢ ' } = {}) => baseMorgan((tokens, req, res) => {
+const morgan = (scope, { badge = '⬢ ' } = {}) => baseMorgan((tokens, req, res) => {
   const reqLength = string(tokens.res(req, res, 'content-length'));
   const reqMethod = string(tokens.method(req, res).slice(0, 3));
   const reqStatus = string(tokens.status(req, res));
@@ -17,7 +17,7 @@ export const morgan = (scope, { badge = '⬢ ' } = {}) => baseMorgan((tokens, re
   const chTime   = getChTime(reqTime);
 
   return [
-    chDisable(`[${scope}] ›`),
+    chalks.disable(`[${scope}] ›`),
     chStatus(badge),
     chStatus.underline(status),
     ' ',
@@ -35,3 +35,5 @@ export const morgan = (scope, { badge = '⬢ ' } = {}) => baseMorgan((tokens, re
  * @returns {String}
  */
 function string(str) { return ((typeof str === 'string') ? str : 'xxx'); }
+
+export default morgan;
