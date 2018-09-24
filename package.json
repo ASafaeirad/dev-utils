@@ -9,9 +9,9 @@
     "url": "git+https://github.com/frontendmonster/dev-utils.git"
   },
   "files": [
-    "src"
+    "dist"
   ],
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
