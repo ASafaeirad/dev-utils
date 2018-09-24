@@ -1,4 +1,4 @@
-const { crossEnv } = require('nps-utils');
+import { crossEnv } from 'nps-utils';
 
 const ENVS = {
   prod: 'production',
@@ -10,12 +10,11 @@ const get = () => process.env.NODE_ENV;
 
 const set = _ => crossEnv(`NODE_ENV=${_}`);
 
-const envUtils = Object.assign({}, ENVS, {
+export const env = {
+  ...ENVS,
   get,
   set,
   isDev: ENVS.dev.includes(get()),
   isProd: ENVS.prod.includes(get()),
   isTest: ENVS.test.includes(get()),
-});
-
-module.exports = envUtils;
+};

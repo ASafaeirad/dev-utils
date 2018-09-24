@@ -1,2 +1,2 @@
-module.exports.env = require('./env');
-module.exports.clear = require('./clear');
+export { env } from './env';
+export { clear } from './clear';
