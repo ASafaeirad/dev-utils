@@ -20,10 +20,19 @@
     "lib:pack": "node ./scripts/publish --just-pack"
   },
   "dependencies": {
+    "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.2",
     "chalk": "^2.4.1",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
     "morgan": "^1.9.1",
     "nps-utils": "^1.7.0",
-    "signale": "^1.3.0"
+    "postcss-flexbugs-fixes": "*",
+    "sass-loader": "^7.1.0",
+    "signale": "^1.3.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.19.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -36,7 +45,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "husky": "^1.0.0-rc.14",
+    "husky": "^1.0.0-rc.15",
     "rimraf": "^2.6.2",
     "yargs": "^12.0.2"
   },
