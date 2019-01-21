@@ -15,8 +15,8 @@
     "prebuild": "npm run clean",
     "build": "tsc --declaration",
     "lint": "tslint src --fix",
-    "lib:publish": "node ./scripts/publish",
-    "lib:pack": "node ./scripts/publish --just-pack"
+    "lib:publish": "builder",
+    "lib:pack": "builder --pack"
   },
   "dependencies": {
     "autoprefixer": "^9.1.5",
@@ -42,6 +42,7 @@
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
+    "@frontendmonster/builder": "^0.2.0",
     "@frontendmonster/eslint-config": "^1.0.1",
     "@types/morgan": "^1.7.35",
     "@types/node": "^10.12.18",
