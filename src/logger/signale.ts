@@ -1,12 +1,13 @@
-import { Signale as SignaleBase } from 'signale';
+import { Signale } from 'signale';
 
-const Signale = scope => new SignaleBase({
+const femSignale = (scope: string) : Signale => new Signale({
   stream: process.stdout,
   scope,
   types: {
     log: {
       badge: '⬢',
       label: 'log',
+      color: '',
     },
     success: {
       badge: '⬢',
@@ -24,6 +25,7 @@ const Signale = scope => new SignaleBase({
       label: 'error',
     },
   },
+
 });
 
-export default Signale;
+export default femSignale;

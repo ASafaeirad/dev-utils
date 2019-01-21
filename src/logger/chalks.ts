@@ -1,4 +1,4 @@
-import chalk from 'chalk';
+import chalk, { Chalk } from 'chalk';
 
 const chalks = {
   info: chalk.blue,
@@ -13,7 +13,7 @@ const chalks = {
  * Get morgan status and return chalk color
  * @param {string} status
  */
-export const getChStatus = (status) => {
+export const getChStatus = (status: string) : Chalk => {
   switch (status) {
     case '2':
       return chalks.success;
@@ -32,6 +32,10 @@ export const getChStatus = (status) => {
  * @param {number} [limit=100] - Response time limit
  * @returns {chalk}
  */
-export const getChTime = (time, limit = 100) => (time < limit ? chalks.success : chalks.warning);
+export const getChTime = (time: number, limit = 100) => (
+  time < limit
+    ? chalks.success
+    : chalks.warning
+);
 
 export default chalks;
