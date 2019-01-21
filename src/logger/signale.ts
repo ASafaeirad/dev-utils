@@ -1,9 +1,21 @@
 import { Signale } from 'signale';
 
-const femSignale = (scope: string) : Signale => new Signale({
+type Methods =
+  | "log"
+  | "error"
+  | "debug"
+  | "success"
+  | "warning"
+
+const femSignale = (scope: string) : Signale<Methods> => new Signale<Methods>({
   stream: process.stdout,
   scope,
   types: {
+    debug: {
+      badge: '⬢',
+      color: 'yellow',
+      label: 'debug',
+    },
     log: {
       badge: '⬢',
       label: 'log',
